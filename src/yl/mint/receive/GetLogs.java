@@ -9,14 +9,14 @@ import java.util.ArrayList;
 /**
  * 获取日志信息
  * @author YL_mint
- * @version CAlpha 1.0
+ * @version CAlpha 1.1
  * @since PAlpha 1.0
  */
 
 @Data
 @EqualsAndHashCode
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @ToString
 public class GetLogs {
     ArrayList<String> logs;
@@ -30,7 +30,7 @@ public class GetLogs {
         logs = readLog(reader);
     }
 
-    private ArrayList<String> readLog(BufferedReader reader) throws IOException {
+    protected ArrayList<String> readLog(BufferedReader reader) throws IOException {
         String log;
         ArrayList<String> logs = new ArrayList<>();
 
