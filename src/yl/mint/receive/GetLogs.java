@@ -13,7 +13,8 @@ import java.util.ArrayList;
  * @since PAlpha 1.0
  */
 
-@Data
+@Getter
+@Setter(value = AccessLevel.PROTECTED)
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

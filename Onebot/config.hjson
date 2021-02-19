@@ -5,9 +5,9 @@
 
 {
     // QQ号
-    uin: 1634433532
+    uin: 0
     // QQ密码
-    password: "xionglue071005"
+    password: ""
     // 是否启用密码加密
     encrypt_password: false
     // 加密后的密码, 如未启用密码加密将为空, 请勿随意修改.
@@ -58,7 +58,7 @@
         // 服务端监听地址
         host: 0.0.0.0
         // 服务端监听端口
-        port: 3916
+        port: 5700
         // 反向HTTP超时时间, 单位秒
         // 最小值为5，小于5将会忽略本项设置
         timeout: 0
@@ -67,8 +67,8 @@
         // {
         //    地址: secret
         // }
-        post_urls: {
-        }
+        post_urls: {}
+    }
     // 正向WS设置
     ws_config: {
         // 是否启用正向WS服务器
@@ -117,5 +117,4 @@
         // 是否接收来自web的输入
         web_input: false
     }
-}
 }

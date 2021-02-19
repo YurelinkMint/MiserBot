@@ -11,7 +11,8 @@ import java.util.ArrayList;
  * @since PAlpha 1.0
  */
 
-@Data
+@Getter
+@Setter(value = AccessLevel.PROTECTED)
 @ToString
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @EqualsAndHashCode
