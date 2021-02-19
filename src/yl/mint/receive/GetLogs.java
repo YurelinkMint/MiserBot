@@ -20,7 +20,7 @@ import java.util.ArrayList;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @ToString
 public class GetLogs {
-    ArrayList<String> logs;
+    private ArrayList<String> logs;
 
     /**
      * 类构造器，调用readLog(BufferedReader)方法，为变量ArrayList<String> logs赋值，随后用户可调用Getter方法获取logs.

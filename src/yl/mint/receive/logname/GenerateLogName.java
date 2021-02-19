@@ -17,7 +17,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @EqualsAndHashCode
 public class GenerateLogName {
-    String logName;
+    private String logName;
 
     public GenerateLogName() {
         logName = getName();
@@ -25,6 +25,7 @@ public class GenerateLogName {
 
     protected String getName() {
         LocalDate date = LocalDate.now();
+        //获取日期的字符串形式
         return date.toString();
     }
 }

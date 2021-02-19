@@ -8,7 +8,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  * 获取过滤过的群信息
@@ -23,13 +22,14 @@ import java.util.Scanner;
 @AllArgsConstructor
 @ToString
 public class GetFiltratedGroupMessage {
-    ArrayList<String> groupMsg;
+    private ArrayList<String> groupMsg;
 
     public GetFiltratedGroupMessage() throws IOException {
         groupMsg = getMessage();
     }
 
     protected ArrayList<String> getMessage() throws IOException {
+        //获取经过滤的消息
         return new Filter(
                 new GetLogs(
                         new BufferedReader(

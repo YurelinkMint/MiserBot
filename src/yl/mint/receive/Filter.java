@@ -17,7 +17,7 @@ import java.util.ArrayList;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @EqualsAndHashCode
 public class Filter {
-    ArrayList<String> filtratedLog;
+    private ArrayList<String> filtratedLog;
 
     public Filter(ArrayList<String> list) {
         filtratedLog = filtrate(list);
@@ -26,6 +26,7 @@ public class Filter {
     protected ArrayList<String> filtrate(ArrayList<String> list) {
         ArrayList<String> filtratedLog = new ArrayList<>();
 
+        //过滤掉非群消息的日志
         for (String s : list) {
             if (s.contains("[INFO]: 收到群")) {
                 filtratedLog.add(s);
