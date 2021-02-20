@@ -25,7 +25,7 @@ public class GetFiltratedGroupMessage {
     private ArrayList<String> groupMsg;
 
     public GetFiltratedGroupMessage() throws IOException {
-        groupMsg = getMessage();
+        setGroupMsg(getMessage());
     }
 
     protected ArrayList<String> getMessage() throws IOException {

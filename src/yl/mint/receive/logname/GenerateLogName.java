@@ -20,9 +20,13 @@ public class GenerateLogName {
     private String logName;
 
     public GenerateLogName() {
-        logName = getName();
+        setLogName(getName());
     }
 
+    /**
+     * 获取日志名（如果你看源代码的话你会发现这个真的很投机取巧啊喂)
+     * @return 日志名字
+     */
     protected String getName() {
         LocalDate date = LocalDate.now();
         //获取日期的字符串形式

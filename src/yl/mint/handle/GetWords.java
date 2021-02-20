@@ -21,9 +21,14 @@ public class GetWords {
     private ArrayList<String> wordList;
 
     public GetWords() throws IOException {
-        wordList = getWords();
+        setWordList(getWords());
     }
 
+    /**
+     * 获取Lexicon.lxn中的所有关键词
+     * @return Lexicon.lxn中的所有关键词
+     * @throws IOException 读写时发生错误抛出
+     */
     protected ArrayList<String> getWords() throws IOException {
         Reader in = new FileReader(".\\src\\yl\\mint\\handle\\lexicon\\Lexicon.lxn");
         BufferedReader reader = new BufferedReader(in);

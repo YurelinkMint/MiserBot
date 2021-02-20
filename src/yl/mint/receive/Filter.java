@@ -20,7 +20,7 @@ public class Filter {
     private ArrayList<String> filtratedLog;
 
     public Filter(ArrayList<String> list) {
-        filtratedLog = filtrate(list);
+        setFiltratedLog(filtrate(new GetLogs().getLogs()));
     }
 
     protected ArrayList<String> filtrate(ArrayList<String> list) {

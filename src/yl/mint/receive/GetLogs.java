@@ -28,7 +28,7 @@ public class GetLogs {
      * @throws IOException 当I/O出错时抛出
      */
     public GetLogs(BufferedReader reader) throws IOException {
-        logs = readLog(reader);
+        setLogs(readLog(reader));
     }
 
     protected ArrayList<String> readLog(BufferedReader reader) throws IOException {
