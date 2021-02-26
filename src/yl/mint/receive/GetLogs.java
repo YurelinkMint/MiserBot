@@ -26,11 +26,19 @@ public class GetLogs {
      * 类构造器，调用readLog(BufferedReader)方法，为变量ArrayList<String> logs赋值，随后用户可调用Getter方法获取logs.
      * @param reader 用于方法readLog(BufferedReader)方法的参数
      * @throws IOException 当I/O出错时抛出
+     * @since CAlpha 1.0 PAlpha 1.0
      */
     public GetLogs(BufferedReader reader) throws IOException {
         setLogs(readLog(reader));
     }
 
+    /**
+     * 读取日志
+     * @param reader 关联到日志文件的输入流
+     * @return 群信息
+     * @throws IOException 当读写发生错误时抛出
+     * @since CAlpha 1.0 PAlpha 1.0
+     */
     protected ArrayList<String> readLog(BufferedReader reader) throws IOException {
         String log;
         ArrayList<String> logs = new ArrayList<>();

@@ -23,6 +23,12 @@ public class Filter {
         setFiltratedLog(filtrate(new GetLogs().getLogs()));
     }
 
+    /**
+     * 输出被过滤的群信息
+     * @param list 未经过滤的信息
+     * @return 过滤过的信息
+     * @since CAlpha 1.0 PAlpha 1.0
+     */
     protected ArrayList<String> filtrate(ArrayList<String> list) {
         ArrayList<String> filtratedLog = new ArrayList<>();
 

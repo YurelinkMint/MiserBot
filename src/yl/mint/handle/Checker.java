@@ -2,6 +2,7 @@ package yl.mint.handle;
 
 import lombok.*;
 
+import yl.mint.handle.lexicon.GetWords;
 import yl.mint.receive.GetFiltratedGroupMessage;
 
 import java.io.IOException;

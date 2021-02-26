@@ -26,6 +26,7 @@ public class GenerateLogName {
     /**
      * 获取日志名（如果你看源代码的话你会发现这个真的很投机取巧啊喂)
      * @return 日志名字
+     * @since CAlpha 1.0 PAlpha 1.0
      */
     protected String getName() {
         LocalDate date = LocalDate.now();

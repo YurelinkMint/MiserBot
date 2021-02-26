@@ -28,6 +28,12 @@ public class GetFiltratedGroupMessage {
         setGroupMsg(getMessage());
     }
 
+    /**
+     * 输出被过滤过的群信息
+     * @return 群信息
+     * @throws IOException 当读写发生错误时抛出
+     * @since CAlpha 1.0 PAlpha 1.0
+     */
     protected ArrayList<String> getMessage() throws IOException {
         //获取经过滤的消息
         return new Filter(
