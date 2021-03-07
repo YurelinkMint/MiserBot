@@ -30,12 +30,10 @@ public class Lexicon {
      * @since CAlpha 1.0 PAlpha 1.0
      */
     protected ArrayList<String> summonLexicon() {
-        String[] keyWords = new String[] {
-                "早",
-            "晚" ,
-                "签到"
-        };
+        ArrayList<String> list = new ArrayList<>();
+        list.add("早");
+        list.add("晚");
 
-        return new ArrayList<>(Arrays.asList(keyWords));
+        return list;
     }
 }

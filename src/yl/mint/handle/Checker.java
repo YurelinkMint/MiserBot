@@ -32,10 +32,9 @@ public class Checker {
     /**
      * 获取关键词
      * @return 关键词（若无则返回null）
-     * @throws IOException 读写时发生错误抛出
      * @since CAlpha 1.0 PAlpha 1.0
      */
-    protected String interceptKeywords() throws IOException {
+    protected String interceptKeywords() {
         ArrayList<String> msgList = new GetFiltratedGroupMessage().getGroupMsg();
         ArrayList<String> wordList = new GetWords().getWordList();
 
@@ -58,8 +57,12 @@ public class Checker {
         final String GOOD_NIGHT = "晚";
         final String SIGH_IN = "签到";
 
-        if (getKeyWord().equals(GOOD_MORNING) || getKeyWord().equals(GOOD_NIGHT) || getKeyWord().equals(SIGH_IN)) {
-            return null;
+        String keyWord = getKeyWord();
+
+        if (keyWord != null) {
+            if (keyWord.equals(GOOD_MORNING) || keyWord.equals(GOOD_NIGHT) || keyWord.equals(SIGH_IN)) {
+                return null;
+            }
         }
 
         return null;

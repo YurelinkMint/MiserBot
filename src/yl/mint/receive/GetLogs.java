@@ -48,6 +48,8 @@ public class GetLogs {
             logs.add(log);
         }
 
+        reader.close();
+
         return logs;
     }
 }

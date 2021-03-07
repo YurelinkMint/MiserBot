@@ -24,8 +24,12 @@ import java.util.ArrayList;
 public class GetFiltratedGroupMessage {
     private ArrayList<String> groupMsg;
 
-    public GetFiltratedGroupMessage() throws IOException {
-        setGroupMsg(getMessage());
+    public GetFiltratedGroupMessage() {
+        try {
+            setGroupMsg(getMessage());
+        } catch (IOException e) {
+            System.out.println("读写时发生异常");
+        }
     }
 
     /**
@@ -40,10 +44,7 @@ public class GetFiltratedGroupMessage {
                 new GetLogs(
                         new BufferedReader(
                                 new FileReader(
-                                        Path.of(
-                                                new GenerateLogName()
-                                                .getLogName())
-                                                .toFile())))
+                                                "D:\\YL_Mint\\Mint's Projects\\Programmes\\MiserBot 米姬\\Onebot\\logs\\" + new GenerateLogName().getLogName() + ".log")))
                         .getLogs())
                 .getFiltratedLog();
     }
